@@ -89,7 +89,7 @@ def show_shopping_cart():
     if cart:
         for item, count in cart.iteritems():
             # in cart melons I will have an object and a count of melons
-            cart_melons[item] = [get_by_id(item), count]
+            cart_melons[item] = [melons.get_by_id(item), count]
             grand_total += cart_melons[item][0].price * count
 
 
